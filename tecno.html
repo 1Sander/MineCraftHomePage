@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="./scripts.js"></script>
+    
+    <img id="listIcon" src="List.svg" alt="Lista" />
+
+
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div id="tituloid" class="titulo">
+       <img src="logo.png"/>
+        <label for="titulo" class="Labeltit">MINE</label>
+    </div>
+    <br></br>
+
+    <div id="menuid" class="menu">
+        <input type="submit" name="submit" id="submitmenu" value="ENTRAR">   
+        <input type="submit" name="submit" id="submitmenu" value="FORUM">    
+        <input type="submit" name="submit" id="submitmenu" value="SOBRE">   
+        <input type="submit" name="submit" id="submitmenu" value="MOJANG">   
+        <input type="submit" name="submit" id="submitmenu" value="PERGUNTAS">   
+     </div>
+
+    <div class="box">
+
+          <legend><img src="logo.png"/></legend>
+          <br>
+          <div class="inputBox">
+            <label for="nome" class="LabelInput">E-MAIL</label>
+
+            <input type="text" name="email" id="email" class="inputUser" required placeholder="sander@mail.com">
+          </div>
+          <br></br>
+          <div class="inputBox">
+            <label for="senha" class="LabelInput">SENHA</label>
+ 
+            <input type="text" name="senha" id="senha" class="inputUser" required placeholder="147258369">
+          </div>
+          <br></br>
+          
+          <input type="checkbox" id="customCheckbox" class="hidden-checkbox">
+          <label for="customCheckbox" class="custom-label"></label>
+
+          <label for="nome" class="Labelsen1">lembrar minha senha</label>
+          <br><br>
+          <input type="submit" name="submit" id="submit" value="ENTRAR NA CONTA">
+          <br>
+
+          <label for="nome" class="Labelsen2">esqueceu a senha?</label>
+         </form>
+      </div>
+
+      <div id="lowborderid" class="lowborder">
+        <div class="info-box">
+            <img src="Power.svg">
+            <label>jogue também offline</label>
+        </div>
+        <div class="info-box">
+            <img src="User.svg">
+            <label>67 jogadores</label>
+        </div>
+        <div class="info-box">
+            <img src="GameController.svg">
+            <label>compatível com o uso de controle remoto</label>
+        </div>
+        <div class="info-box">
+            <img src="Vibrate.svg">
+            <label>vibração no controle</label>
+        </div>
+        <div class="info-box">
+            <img src="Baby.svg">
+            <label>permitido para menores</label>
+        </div>
+    </div>
+
+
+    <script>
+
+function verificarResolucao() {
+  var listIcon = document.getElementById("listIcon");
+  var menuid = document.getElementById("menuid");
+  var lowborderid = document.getElementById("lowborderid");
+  var body = document.body;
+  
+  if (window.innerWidth <= 1024) {
+    listIcon.style.display = "block";
+    menuid.style.display = "none";
+    lowborderid.style.display = "block";
+    tituloid.style.display = "initial";
+
+    body.classList.add("esticar-verticalmente"); 
+  } else {
+    listIcon.style.display = "none";
+    menuid.style.display = "flex";
+    lowborderid.style.display = "flex";
+    tituloid.style.display = "block";
+
+    body.classList.remove("esticar-verticalmente"); 
+  }
+}
+
+verificarResolucao();
+
+window.addEventListener("resize", verificarResolucao);
+
+    </script>
+</body>
+</html>
